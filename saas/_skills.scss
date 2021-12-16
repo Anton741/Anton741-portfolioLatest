@@ -1,0 +1,103 @@
+.skills{
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #FFFFFF;
+  z-index: 15;
+  padding: 100px 0 162px 0;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  &__raw{
+    margin: 106px 0;
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 65px;
+    align-items:center;
+    justify-content: center;
+  }
+  &__item{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.18538em;
+    margin: 0 0 75px;
+  }
+  &__icon{
+    width: 84.21px;
+    height: 100px;
+    margin: 0 0 30px;
+    &-html5{
+      background-image:url('/img/html5.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-css3{
+      background-image:url('/img/css3.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-saas{
+      background-image:url('/img/saas.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-js{
+      background-image:url('/img/js.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-react{
+      background-image:url('/img/react.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-redux{
+      background-image:url('/img/redux.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-git{
+      background-image:url('/img/git.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-figma{
+      background-image:url('/img/figma.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-node{
+      background-image:url('/img/node.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-ts{
+      background-image:url('/img/ts.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-eng{
+      background-image:url('/img/eng.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__name{
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.13538em;
+  }
+}
+
+@media(max-width:786px){
+  .skills{
+    &__list{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "svg-url-loader": "^7.1.1"
+  },
+  "dependencies": {
+    "yum": "^0.1.1",
+    "yup": "^0.32.11"
+  }
+}

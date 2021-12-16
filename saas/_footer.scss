@@ -1,0 +1,17 @@
+.footer{
+  background:rgba(24, 22, 22, 0.918);
+  padding: 5%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 138.68%;
+  &__raw{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: flex-end;
+  }
+  &__column{
+    text-align: end;
+  }
+}
