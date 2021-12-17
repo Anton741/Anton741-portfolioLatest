@@ -7,48 +7,48 @@
 //   }))
 // }
 
-const form = document.querySelector('.contact__form')
-const input = document.querySelectorAll('.contact__input')
-const error = document.querySelector('.errors')
-let  errors = []
-form.addEventListener('submit',async (e) =>  {
-  // e.preventDefault()
-  if(input[0].value.length === 0 || input[1].value.length === 0 || input[3].value.length === 0 ){
-    errors.push("If you want to sent message to me, please fill all field with *")
-  }else{
-    errors.length = 0
-  }
-  const data = {
-    name: input[0].value,
-    email: input[1].value,
-    number: input[2].value,
-    message: input[3].value
-  }
-  errors = [...new Set(errors)]
-  if (errors.length > 0){
-    errors = errors.map(err => `<p>${err}</p>`)
-    console.log(errors);
-    error.classList.add('errors-alert')
-    error.innerHTML = `${errors}`
-  }else{
-    error.classList.remove('errors-alert')
-    let response = await fetch('sendmail.php', {
-      method: POST,
-      body: data
-    })
-    if (response.ok) {
-      let result = await response.json()
-      console.log(result);
-      form.reset()
-    }else{
-      console.log("Error");
-    }
-  }
-  console.log(errors);
-  // for (let i= 0;  i<input.length; i++){
-  //   console.log(input[i].value);
-  // }
-})
+// const form = document.querySelector('.contact__form')
+// const input = document.querySelectorAll('.contact__input')
+// const error = document.querySelector('.errors')
+// let  errors = []
+// form.addEventListener('submit',async (e) =>  {
+//   // e.preventDefault()
+//   if(input[0].value.length === 0 || input[1].value.length === 0 || input[3].value.length === 0 ){
+//     errors.push("If you want to sent message to me, please fill all field with *")
+//   }else{
+//     errors.length = 0
+//   }
+//   const data = {
+//     name: input[0].value,
+//     email: input[1].value,
+//     number: input[2].value,
+//     message: input[3].value
+//   }
+//   errors = [...new Set(errors)]
+//   if (errors.length > 0){
+//     errors = errors.map(err => `<p>${err}</p>`)
+//     console.log(errors);
+//     error.classList.add('errors-alert')
+//     error.innerHTML = `${errors}`
+//   }else{
+//     error.classList.remove('errors-alert')
+//     let response = await fetch('sendmail.php', {
+//       method: POST,
+//       body: data
+//     })
+//     if (response.ok) {
+//       let result = await response.json()
+//       console.log(result);
+//       form.reset()
+//     }else{
+//       console.log("Error");
+//     }
+//   }
+//   console.log(errors);
+//   // for (let i= 0;  i<input.length; i++){
+//   //   console.log(input[i].value);
+//   // }
+// })
 
 
 
